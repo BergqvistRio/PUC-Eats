@@ -3,7 +3,7 @@ from django.http import JsonResponse
 import requests
 
 def index(request):
-    return render(request, 'puceats/index.html')
+    return render(request, 'index.html')
 
 def exemplo_consumir_api(request):
     try:
