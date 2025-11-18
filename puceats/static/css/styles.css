@@ -74,7 +74,7 @@ header {
     fill: #fff;
 }
 
-.user-icon {
+.menu-icon {
     width: 36px;
     height: 36px;
     background-color: #fff;
@@ -84,9 +84,15 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
+    padding: 0;
 }
 
-.user-icon svg {
+.menu-icon:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-icon svg {
     width: 20px;
     height: 20px;
     fill: #9CCC65;
