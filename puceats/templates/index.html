@@ -6,9 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PUC Eats</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+    <aside class="menu-sidebar" id="menuSidebar">
+        <header class="menu-header">
+            <h1 class="brand">PUC <span>Eats</span></h1>
+        </header>
+
+        <nav class="nav">
+            <a href="#" class="item active">
+                <span class="material-icons">home</span>
+                <span>Tela Inicial</span>
+            </a>
+            <a href="#" class="item">
+                <span class="material-icons">restaurant</span>
+                <span>Restaurantes</span>
+            </a>
+            <a href="#" class="item">
+                <span class="material-icons">lunch_dining</span>
+                <span>Lanchonetes</span>
+            </a>
+            <a href="#" class="item">
+                <span class="material-icons">storefront</span>
+                <span>Barracas</span>
+            </a>
+            <a href="#" class="item">
+                <span class="material-icons">favorite_border</span>
+                <span>Favoritos</span>
+            </a>
+        </nav>
+
+        <footer class="menu-footer">
+            <a href="#" class="item">
+                <span class="material-icons">store</span>
+                <span>Conta restaurante</span>
+            </a>
+            <a href="#" class="item">
+                <span class="material-icons">settings</span>
+                <span>Configurações</span>
+            </a>
+        </footer>
+    </aside>
+    
+    <div class="overlay" id="overlay"></div>
     <header>
         <div class="logo">PUC Eats</div>
         <div class="search-container">
@@ -27,6 +69,7 @@
     </header>
     
     <div class="main-container">
+        <div id="map"></div>
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h2>Restaurantes</h2>
@@ -43,7 +86,6 @@
                 </div>
             </div>
         </aside>
-        <div id="map"></div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -75,6 +117,19 @@
 
         L.marker(pucRio, {icon: customIcon}).addTo(map)
             .bindPopup('PUC-Rio');
+
+        // Menu toggle functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuSidebar = document.getElementById('menuSidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            menuSidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
     </script>
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar Conta - PUC-Rio Eats</title>
+  <link rel="stylesheet" href="../static/cadastro_style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="text-overlay">
+        <h1>PUC Eats</h1>
+        <p>Descubra os melhores restaurantes do campus da Gávea</p>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="form-box">
+        <h2>Criar Conta</h2>
+        <p class="subtitle">Cadastre-se para acessar o PUC-Rio Eats</p>
+
+        <form>
+          <div class="input-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Seu nome completo" required />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email Institucional</label>
+            <input type="email" id="email" placeholder="seunome@puc-rio.br" required />
+          </div>
+
+          <div class="input-group">
+            <label for="matricula">Matrícula</label>
+            <input type="text" id="matricula" placeholder="Sua matrícula" required />
+          </div>
+
+          <div class="input-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Crie uma senha" required />
+          </div>
+
+          <div class="input-group">
+            <label for="confirmar">Confirmar Senha</label>
+            <input type="password" id="confirmar" placeholder="Confirme sua senha" required />
+          </div>
+
+          <div class="terms">
+            <input type="checkbox" id="termos" required />
+            <label for="termos">
+              Eu aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Criar Conta</button>
+
+          <div class="divider">
+            <span>OU CADASTRE-SE COM</span>
+          </div>
+
+          <button type="button" class="btn-google">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
+            Google
+          </button>
+
+          <p class="login-link">
+            Já tem uma conta? <a href="index.html">Faça login aqui</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
