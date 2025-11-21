@@ -37,28 +37,86 @@ body {
   margin-top: 100px; 
 }
 
+.form-box {
+  width: 100%;
+}
+
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 8px;
-  color: #2f2a1f;
+  color: #9CCC65;
 }
 
-p {
-  color: #5b5446;
-  font-size: 1rem;
-  margin: 0 0 20px;
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0 0 24px;
 }
 
-.input {
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input {
   width: 100%;
   padding: 12px;
-  border: 1.5px solid #efe9dc;
+  border: 1.5px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f6f2;
-  color: #2f2a1f;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
-.input:disabled {
-  background-color: #f1ebe3;
-  color: #a8a193;
+.input-group input:focus {
+  outline: none;
+  border-color: #9CCC65;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #9CCC65;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #8BC34A;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 8px 0 0;
+}
+
+.login-link a {
+  color: #9CCC65;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
 }
