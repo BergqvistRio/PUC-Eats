@@ -172,6 +172,21 @@ label {
   text-decoration: underline;
 }
 
+.home-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.home-link a {
+  color: #9CCC65;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-link a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
