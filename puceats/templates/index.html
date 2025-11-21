@@ -61,11 +61,18 @@
                 </svg>
             </button>
         </div>
-        <button class="menu-icon" id="menuToggle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-            </svg>
-        </button>
+        <div class="button-group">
+            <button class="menu-icon" id="menuToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                </svg>
+            </button>
+        </div>
     </header>
     
     <div class="main-container">
@@ -130,6 +137,15 @@
 
         menuToggle.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
+
+        // Sidebar toggle functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('hidden');
+            sidebarToggle.classList.toggle('active');
+        });
     </script>
 </body>
 </html>

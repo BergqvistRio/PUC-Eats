@@ -172,19 +172,26 @@ label {
   text-decoration: underline;
 }
 
-.home-link {
+.home-btn {
+  display: block;
+  width: 100%;
   margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-.home-link a {
+  padding: 10px 0;
+  background-color: transparent;
   color: #9CCC65;
+  border: 2px solid #9CCC65;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.home-link a:hover {
-  text-decoration: underline;
+.home-btn:hover {
+  background-color: #9CCC65;
+  color: white;
 }
 
 @media (max-width: 900px) {
