@@ -5,6 +5,15 @@ import requests
 def index(request):
     return render(request, 'index.html')
 
+def login(request):
+    return render(request, 'login.html')
+
+def cadastro(request):
+    return render(request, 'cadastro.html')
+
+def esqueci_senha(request):
+    return render(request, 'EsqueciMinhaSenha.html')
+
 def exemplo_consumir_api(request):
     try:
         response = requests.get('https://jsonplaceholder.typicode.com/posts/1')

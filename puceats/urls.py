@@ -5,5 +5,8 @@ app_name = 'puceats'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('login/', views.login, name='login'),
+    path('cadastro/', views.cadastro, name='cadastro'),
+    path('esqueci-senha/', views.esqueci_senha, name='esqueci-senha'),
     path('exemplo-api/', views.exemplo_consumir_api, name='exemplo-api'),
 ]
