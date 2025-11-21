@@ -44,7 +44,7 @@ body, html {
 
 .right-panel {
   flex: 1;
-  background-color: #faf4d2;
+  background-color: #F1EAD1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ body, html {
 }
 
 .login-box h2 {
-  color: #7ca043;
+  color: #9CCC65;
   font-size: 1.8rem;
   margin-bottom: 5px;
 }
@@ -68,7 +68,7 @@ body, html {
 
 label {
   display: block;
-  color: #7ca043;
+  color: #9CCC65;
   font-weight: 600;
   text-align: left;
   margin-bottom: 5px;
@@ -106,17 +106,17 @@ label {
 
 .btn {
   width: 100%;
-  background-color: #7ca043;
+  background-color: #9CCC65;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 10px 0;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #6b8f38;
+  background-color: #8BC34A;
 }
 
 .divider {
