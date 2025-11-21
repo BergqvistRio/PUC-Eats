@@ -16,7 +16,10 @@ body, html {
 }
 
 .left-panel {
-  background: url(https://www.puc-rio.br/vestibular/202512/imagens/img_vest2026_slide01.jpg);
+  background: url('../images/puc-campus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 600px;
   display: flex;
   align-items: flex-end;
