@@ -1,0 +1,116 @@
+body { 
+    font-family: 'Roboto', system-ui, sans-serif; 
+    background-color: #F1EAD1;
+}
+body.bg-light {
+    background-color: #F1EAD1 !important;
+}
+.card-img-top { 
+    height: 12rem; object-fit: cover; 
+}
+.badgeOverlay { 
+    position: absolute; top: .5rem; left: .5rem;
+}
+.hoverTransform { 
+    transition: transform .2s ease; 
+}
+.hoverTransform:hover { 
+    transform: scale(1.03);
+}
+
+.btnEditar {
+    color: #8FB339;
+    border-color: #8FB339;
+    background-color: transparent;
+}
+.btnEditar:hover,
+.btnEditar:focus {
+    color: #ffffff;
+    background-color: #8FB339;
+    border-color: #7ba02f; 
+}
+.btnEditar:active {
+    color: #ffffff;
+    background-color: #7ba02f;
+    border-color: #6f922a;
+}
+.btnEditar:focus-visible {
+    box-shadow: 0 0 0 .25rem rgba(143, 179, 57, .25);
+}
+
+.faixaTitulo {
+    background: #ffffff; /* match navbar-like white */
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 .25rem .75rem rgba(0,0,0,0.06);
+}
+
+/* Modal (JS-controlled) */
+.modalContainer {
+    position: fixed;
+    inset: 0;
+    z-index: 1050; /* above content */
+    display: block; /* keep in flow for transitions */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .2s ease, visibility .2s ease;
+}
+.modalContainer.isOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.modalBackdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.15); 
+    z-index: 0;
+}
+.modalContent {
+    position: relative;
+    width: min(680px, 92vw);
+    margin: 6vh auto 0 auto;
+    background: #F1EAD1; 
+    border-radius: .5rem;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.15);
+    padding: 1.25rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: transform .2s ease, opacity .2s ease;
+    z-index: 1; 
+}
+.modalContainer.isOpen .modalContent {
+    opacity: 1;
+    transform: none;
+}
+.modalContent .btn-close {
+    filter: none;
+}
+@media (max-width: 576px) {
+    .modalContent { margin-top: 4vh; padding: 1rem; }
+}
+
+body.modalOpen {
+    overflow: hidden;
+}
+
+.btnAdicionar {
+    color: #ffffff;
+    background-color: #6f922a;
+    border-color: #6f922a;
+}
+.btnAdicionar:hover,
+.btnAdicionar:focus {
+    color: #ffffff;
+    background-color: #628424; 
+    border-color: #587820;
+}
+.btnAdicionar:active {
+    color: #ffffff;
+    background-color: #587820;
+    border-color: #4f6d1d;
+}
+.btnAdicionar:focus-visible {
+    box-shadow: 0 0 0 .25rem rgba(111, 146, 42, .35);
+}

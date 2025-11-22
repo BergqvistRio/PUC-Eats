@@ -14,6 +14,9 @@ def cadastro(request):
 def esqueci_senha(request):
     return render(request, 'EsqueciMinhaSenha.html')
 
+def favoritos(request):
+    return render(request, 'Favoritos.html')
+
 def exemplo_consumir_api(request):
     try:
         response = requests.get('https://jsonplaceholder.typicode.com/posts/1')

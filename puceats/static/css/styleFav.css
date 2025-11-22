@@ -1,0 +1,134 @@
+:root {
+  --beige: #f1ead1;
+  --card: #ffffff;
+  --text-900: #2f2a1f;
+  --text-700: #5b5446;
+  --border: #e9e1d5;
+  --green: #6f922a;
+  --shadow: 0 6px 18px rgba(0,0,0,.08);
+  --radius: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--beige);
+  color: var(--text-900);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  padding: 12px 24px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-green {
+  color: #6f922a;
+}
+
+.page {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.thumb {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain; 
+}
+
+.content {
+  padding: 16px;
+}
+
+.pill {
+  display: inline-block;
+  background: #eef8f1;
+  color: #12563b;
+  border: 1px solid #d6ecdf;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.meta {
+  color: var(--text-700);
+  font-size: .95rem;
+}
+
+.action-footer {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-return {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #9CCC65;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-return:hover {
+  background-color: #8BC34A;
+}

@@ -1,0 +1,46 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PUC Eats • Favoritos</title>
+  <link rel="stylesheet" href="{% static 'css/styleFav.css' %}" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner">
+      <h1 class="logo"><span class="logo-green">PUC Eats</span></h1>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="title">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+             stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-10.3a5 5 0 0 0 0-7.1Z"/>
+        </svg>
+      </span>
+      <h2>Favoritos</h2>
+    </div>
+
+    <section class="grid">
+      <article class="card">
+        <div class="thumb">
+          <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEPQDnVeWa1cw/company-logo_200_200/company-logo_200_200/0/1656964569131/lemaxhamburgueria_logo?e=2147483647&v=beta&t=y5b70H7LmroOY0aOKfLv4Jn6Yvo3quBgTcSvPzRqOec"  />
+        </div>
+        <div class="content">
+          <span class="pill">Favorito</span>
+          <div class="name">Le Max</div>
+          <p class="meta">Dentro do campus da PUC-Rio - Prédio Cardeal Leme • Lanches e refeições rápidas</p>
+        </div>
+      </article>
+    </section>
+
+    <div class="action-footer">
+      <a href="{% url 'puceats:index' %}" class="btn-return">Voltar à Tela Inicial</a>
+    </div>
+  </main>
+</body>
+</html>
