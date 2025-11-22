@@ -25,15 +25,12 @@ body, html {
   z-index: 2;
   max-width: 540px;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .auth-card::-webkit-scrollbar {
   display: none;
-}
-
-.auth-card {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .auth-header {
