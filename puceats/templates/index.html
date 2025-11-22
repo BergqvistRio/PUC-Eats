@@ -51,27 +51,42 @@
     </aside>
     
     <div class="overlay" id="overlay"></div>
-    <header>
-        <div class="logo">PUC Eats</div>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Buscar restaurantes, pratos...">
-            <button class="search-button">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-                </svg>
-            </button>
+    <header class="modern-header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo-wrapper">
+                    <div class="logo-icon">
+                        <span class="material-icons">place</span>
+                    </div>
+                    <h1 class="logo-text">PUC <span class="logo-accent">Eats</span></h1>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <div class="search-wrapper">
+                    <span class="material-icons search-icon-left">search</span>
+                    <input type="text" class="search-input" placeholder="Buscar restaurantes, pratos...">
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button class="icon-btn search-mobile-btn" id="searchMobileToggle">
+                    <span class="material-icons">search</span>
+                </button>
+                <button class="icon-btn" id="menuToggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <button class="icon-btn" id="sidebarToggle">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+            </div>
         </div>
-        <div class="button-group">
-            <button class="menu-icon" id="menuToggle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                </svg>
-            </button>
-            <button class="sidebar-toggle" id="sidebarToggle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
-                </svg>
-            </button>
+
+        <div class="search-mobile" id="searchMobile">
+            <div class="search-wrapper">
+                <span class="material-icons search-icon-left">search</span>
+                <input type="text" class="search-input" placeholder="Buscar restaurantes, pratos...">
+            </div>
         </div>
     </header>
     
@@ -145,6 +160,18 @@
         sidebarToggle.addEventListener('click', function() {
             sidebar.classList.toggle('hidden');
             sidebarToggle.classList.toggle('active');
+        });
+
+        // Mobile search toggle functionality
+        const searchMobileToggle = document.getElementById('searchMobileToggle');
+        const searchMobile = document.getElementById('searchMobile');
+
+        searchMobileToggle.addEventListener('click', function() {
+            if (searchMobile.style.display === 'none' || searchMobile.style.display === '') {
+                searchMobile.style.display = 'block';
+            } else {
+                searchMobile.style.display = 'none';
+            }
         });
     </script>
 </body>
