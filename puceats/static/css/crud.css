@@ -1,9 +1,70 @@
 body { 
-    font-family: 'Roboto', system-ui, sans-serif; 
-    background-color: #F1EAD1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif; 
+    background-color: #fafafa;
 }
 body.bg-light {
-    background-color: #F1EAD1 !important;
+    background-color: #fafafa !important;
+}
+
+/* Modern Header Styles */
+.modern-header {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.logo-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #9CCC65 0%, #8BC34A 100%);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(156, 204, 101, 0.3);
+}
+
+.logo-icon-wrapper .material-icons {
+    color: white;
+    font-size: 28px;
+}
+
+.logo-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.logo-title .text-success {
+    color: #9CCC65 !important;
+}
+
+.logo-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: -2px;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #9CCC65 0%, #8BC34A 100%) !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(156, 204, 101, 0.3);
+    transition: all 0.2s;
+}
+
+.btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(156, 204, 101, 0.4) !important;
+}
+
+.btn-outline-secondary {
+    border-color: #e5e7eb !important;
+    color: #6b7280 !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f9fafb !important;
+    border-color: #d1d5db !important;
+    color: #374151 !important;
 }
 .card-img-top { 
     height: 12rem; object-fit: cover; 
@@ -70,11 +131,11 @@ body.bg-light {
     position: relative;
     width: min(680px, 92vw);
     margin: 6vh auto 0 auto;
-    background: #F1EAD1; 
-    border-radius: .5rem;
-    border: 1px solid rgba(0,0,0,.08);
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.15);
-    padding: 1.25rem;
+    background: #ffffff; 
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,.15);
+    padding: 32px;
     opacity: 0;
     transform: translateY(-8px);
     transition: transform .2s ease, opacity .2s ease;
@@ -84,33 +145,88 @@ body.bg-light {
     opacity: 1;
     transform: none;
 }
-.modalContent .btn-close {
-    filter: none;
-}
+
 @media (max-width: 576px) {
-    .modalContent { margin-top: 4vh; padding: 1rem; }
+    .modalContent { margin-top: 4vh; padding: 24px; }
 }
 
 body.modalOpen {
     overflow: hidden;
 }
 
-.btnAdicionar {
-    color: #ffffff;
-    background-color: #6f922a;
-    border-color: #6f922a;
+/* Modal Header Styles */
+.modal-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
 }
-.btnAdicionar:hover,
-.btnAdicionar:focus {
-    color: #ffffff;
-    background-color: #628424; 
-    border-color: #587820;
+
+.modal-title-custom {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
 }
-.btnAdicionar:active {
-    color: #ffffff;
-    background-color: #587820;
-    border-color: #4f6d1d;
+
+.modal-subtitle-custom {
+    font-size: 14px;
+    color: #6b7280;
 }
-.btnAdicionar:focus-visible {
-    box-shadow: 0 0 0 .25rem rgba(111, 146, 42, .35);
+
+.btn-close-custom {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-close-custom:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-close-custom .material-icons {
+    font-size: 24px;
+    color: #6b7280;
+}
+
+/* Modal Form Styles */
+.modalContent .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.modalContent .form-control,
+.modalContent .form-select {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.modalContent .form-control:focus,
+.modalContent .form-select:focus {
+    border-color: #9CCC65;
+    box-shadow: 0 0 0 3px rgba(156, 204, 101, 0.1);
+}
+
+.btn-modal-cancel {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-modal-submit {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
 }
