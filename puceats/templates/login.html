@@ -5,57 +5,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUC Eats - Login</title>
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/login.css' %}" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="left-panel">
-      <div class="text-overlay">
-        <h1>PUC Eats</h1>
-        <p>Descubra os melhores restaurantes do campus da Gávea</p>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="logo-wrapper">
+          <div class="logo-icon">
+            <span class="material-icons">place</span>
+          </div>
+          <h1 class="logo-text">PUC <span class="logo-accent">Eats</span></h1>
+        </div>
+      </div>
+
+      <div class="auth-content">
+        <div class="welcome-section">
+          <h2 class="welcome-title">Bem-vindo de volta</h2>
+          <p class="welcome-subtitle">Faça login para acessar sua conta</p>
+        </div>
+
+        <form action="{% url 'puceats:crud' %}" method="get" class="auth-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Email ou Matrícula</label>
+            <input 
+              type="email" 
+              id="email" 
+              class="form-input" 
+              placeholder="seu.email@dominio" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="senha" class="form-label">Senha</label>
+            <input 
+              type="password" 
+              id="senha" 
+              class="form-input" 
+              placeholder="Digite sua senha" 
+              required
+            >
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox-input">
+              <span>Lembrar-me</span>
+            </label>
+            <a href="{% url 'puceats:esqueci-senha' %}" class="link-primary">Esqueceu a senha?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Entrar
+          </button>
+
+          <div class="divider">
+            <span>ou continue com</span>
+          </div>
+
+          <button type="button" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
+              <path d="M9.003 18c2.43 0 4.467-.806 5.956-2.18L12.05 13.56c-.806.54-1.836.86-3.047.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9.003 18z" fill="#34A853"/>
+              <path d="M3.964 10.712c-.18-.54-.282-1.117-.282-1.71 0-.593.102-1.17.282-1.71V4.96H.957C.347 6.175 0 7.55 0 9.002c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/>
+              <path d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.426 0 9.003 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29c.708-2.127 2.692-3.71 5.036-3.71z" fill="#EA4335"/>
+            </svg>
+            Entrar com Google
+          </button>
+
+          <div class="auth-footer">
+            <p class="footer-text">
+              Não tem uma conta? <a href="{% url 'puceats:cadastro' %}" class="link-primary">Cadastre-se</a>
+            </p>
+            <a href="{% url 'puceats:index' %}" class="btn-back">
+              <span class="material-icons">arrow_back</span>
+              Voltar ao início
+            </a>
+          </div>
+        </form>
       </div>
     </div>
 
-    <div class="right-panel">
-      <div class="login-box">
-        <h2>Bem-vindo</h2>
-        <p>Faça login para acessar o PUC Eats</p>
-        <form action="{% url 'puceats:crud' %}" method="get">
-          <label for="email">Email ou Matrícula</label>
-          <div class="input-group">
-            <input type="email" id="email" placeholder="seu.email@dominio" required>
-          </div>
-
-          <label for="senha">Senha</label>
-          <div class="input-group">
-            <input type="password" id="senha" placeholder="Digite sua senha" required>
-          </div>
-
-          <div class="options">
-            <label><input type="checkbox"> Lembrar-me</label>
-            <a href="{% url 'puceats:esqueci-senha' %}">Esqueceu a senha?</a>
-          </div>
-
-          <button type="submit" class="btn">Entrar</button>
-
-          <div class="divider">OU ENTRE COM</div>
-
-          <button type="button" class="google-btn">
-            Google
-          </button>
-
-          <p class="register">
-            Não tem uma conta? <a href="{% url 'puceats:cadastro' %}">Cadastre-se aqui</a>
-          </p>
-          
-          <a href="{% url 'puceats:index' %}" class="home-btn">
-            ← Voltar ao menu inicial
-          </a>
-        </form>
-      </div>
+    <div class="auth-background">
+      <div class="background-overlay"></div>
+      <img src="{% static 'images/puc-campus.jpg' %}" alt="Campus PUC-Rio" class="background-image">
     </div>
   </div>
 </body>

@@ -117,8 +117,8 @@
         const map = L.map('map', {
             center: pucRio,
             zoom: 15,
-            minZoom: 14,
-            maxZoom: 18,
+            minZoom: 18,
+            maxZoom: 22,
             maxBounds: [
                 [-22.9894, -43.2429],
                 [-22.9694, -43.2229]
@@ -140,7 +140,6 @@
         L.marker(pucRio, {icon: customIcon}).addTo(map)
             .bindPopup('PUC-Rio');
 
-        // Menu toggle functionality
         const menuToggle = document.getElementById('menuToggle');
         const menuSidebar = document.getElementById('menuSidebar');
         const overlay = document.getElementById('overlay');
@@ -153,7 +152,6 @@
         menuToggle.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Sidebar toggle functionality
         const sidebarToggle = document.getElementById('sidebarToggle');
         const sidebar = document.querySelector('.sidebar');
 
@@ -162,7 +160,6 @@
             sidebarToggle.classList.toggle('active');
         });
 
-        // Mobile search toggle functionality
         const searchMobileToggle = document.getElementById('searchMobileToggle');
         const searchMobile = document.getElementById('searchMobile');
 
