@@ -9,5 +9,6 @@ urlpatterns = [
     path('cadastro/', views.cadastro, name='cadastro'),
     path('esqueci-senha/', views.esqueci_senha, name='esqueci-senha'),
     path('favoritos/', views.favoritos, name='favoritos'),
+    path('crud/', views.crud, name='crud'),
     path('exemplo-api/', views.exemplo_consumir_api, name='exemplo-api'),
 ]

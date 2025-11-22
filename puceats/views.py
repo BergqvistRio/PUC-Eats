@@ -17,6 +17,9 @@ def esqueci_senha(request):
 def favoritos(request):
     return render(request, 'Favoritos.html')
 
+def crud(request):
+    return render(request, 'crud.html')
+
 def exemplo_consumir_api(request):
     try:
         response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
