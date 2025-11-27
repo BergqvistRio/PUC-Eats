@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from .models import Restaurant
 import requests
+from .models import Restaurant
 
 def index(request):
     return render(request, 'index.html')
@@ -30,11 +31,18 @@ def exemplo_consumir_api(request):
         return JsonResponse({'success': False, 'error': str(e)})
 
 def restaurant_detail(request, slug):
+    """
+    Página de detalhes de um restaurante.
+    Busca pelo slug e mostra o cardápio.
+    """
     restaurant = get_object_or_404(Restaurant, slug=slug)
-    dishes = restaurant.dishes.filter(available=True)
-    
-    context = {
-        'restaurant': restaurant,
-        'dishes': dishes
-    }
-    return render(request, 'restaurant_detail.html', context)
+    dishes = restaurant.dishes.all().select_related("category")
+
+    return render(
+        request,
+        "restaurants/restaurant_detail.html",
+        {
+            "restaurant": restaurant,
+            "dishes": dishes,
+        },
+    )
