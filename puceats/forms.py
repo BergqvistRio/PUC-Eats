@@ -52,11 +52,11 @@ class CategoryForm(forms.ModelForm):
         fields = ["name", "icon"]
 
 
-# Formset para permitir cadastrar vários pratos de um restaurante
 DishFormSet = inlineformset_factory(
     parent_model=Restaurant,
     model=Dish,
     form=DishForm,
-    extra=1,            # quantos formulários vazios aparecem inicialmente
-    can_delete=True,    # permite marcar prato para excluir
+    extra=1,            
+    can_delete=True,    
+    
 )
