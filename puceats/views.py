@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
+from .models import Restaurant
 import requests
 
 def index(request):
@@ -28,3 +29,12 @@ def exemplo_consumir_api(request):
     except Exception as e:
         return JsonResponse({'success': False, 'error': str(e)})
 
+def restaurant_detail(request, slug):
+    restaurant = get_object_or_404(Restaurant, slug=slug)
+    dishes = restaurant.dishes.filter(available=True)
+    
+    context = {
+        'restaurant': restaurant,
+        'dishes': dishes
+    }
+    return render(request, 'restaurant_detail.html', context)
